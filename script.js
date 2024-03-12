@@ -10,9 +10,9 @@ function threeSum(arr, target) {
                         for(let k=j+1 ; k<arr.length ; k++)
                             {
                                 let sum = arr[i] + arr[j] +arr[k];
-                                console.log(arr[i] , arr[j] ,arr[k])
+                                // console.log(arr[i] , arr[j] ,arr[k])
                                 let diff = Math.abs(target-sum)
-                                console.log("diff" , diff)
+                                // console.log("diff" , diff)
                                 
                                 if(diff < closestSum)
                                 {
