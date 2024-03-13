@@ -26,7 +26,9 @@
 //     }
 
 
-/* function threeSum(nums, target) {
+/*  code by chatgpt
+
+function threeSum(nums, target) {
     nums.sort((a, b) => a - b); // Sort the array
 
     let closestSum = nums[0] + nums[1] + nums[2]; // Initialize closest sum
@@ -54,7 +56,7 @@
 function threeSum(arr, target) {
     // write your code here
         let closestSum = -1;
-	 let initialDiff = Infinity;
+	   let initialDiff = Infinity;
         // let sum ; 
         
         for(let i=0 ; i<arr.length-2 ; i++)
@@ -64,12 +66,14 @@ function threeSum(arr, target) {
                         for(let k=j+1 ; k<arr.length ; k++)
                             {
                                 let sum = arr[i] + arr[j] +arr[k];
+                                // console.log (sum)
                                 // console.log(arr[i] , arr[j] ,arr[k])
                                 let diff = Math.abs(target-sum)
+                                // console.log("diff" , diff);
                                 // console.log("diff" , diff)
                                 
 		                        if(diff < initialDiff)
-                                {
+                                {   initialDiff=diff
                                     closestSum = sum;
                                 }
                             }
@@ -78,6 +82,5 @@ function threeSum(arr, target) {
         return closestSum;
       
      }
-
 
 module.exports = threeSum;
