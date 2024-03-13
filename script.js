@@ -26,7 +26,7 @@
 //     }
 
 
-function threeSum(nums, target) {
+/* function threeSum(nums, target) {
     nums.sort((a, b) => a - b); // Sort the array
 
     let closestSum = nums[0] + nums[1] + nums[2]; // Initialize closest sum
@@ -50,5 +50,34 @@ function threeSum(nums, target) {
     }
     return closestSum; // Return closest sum
 }
+*/
+function threeSum(arr, target) {
+    // write your code here
+        let closestSum = -1;
+	 let initialDiff = Infinity;
+        // let sum ; 
+        
+        for(let i=0 ; i<arr.length-2 ; i++)
+            {
+                for(let j=i+1 ; j<arr.length-1; j++)
+                    {
+                        for(let k=j+1 ; k<arr.length ; k++)
+                            {
+                                let sum = arr[i] + arr[j] +arr[k];
+                                // console.log(arr[i] , arr[j] ,arr[k])
+                                let diff = Math.abs(target-sum)
+                                // console.log("diff" , diff)
+                                
+		                        if(diff < initialDiff)
+                                {
+                                    closestSum = sum;
+                                }
+                            }
+                    }
+            }
+        return closestSum;
+      
+     }
+
 
 module.exports = threeSum;
